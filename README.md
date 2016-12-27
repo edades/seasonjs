@@ -3,7 +3,7 @@
 Add a simple custom subscribe form to yout website
 
 ![Image of SeasonJS](http://vvcap.com/img/f5bZair9yMP.png)
-![Image of SeasonJS 2](http://vvcap.com/img/AHi2dQYBqWX.png)
+![Image of SeasonJS 2](http://vvcap.com/img/rMUUNq39K0F.png)
 
 ### How to use
 * First add `<script src="../seasonjs.js"></script>` after jquery integration.
@@ -19,10 +19,13 @@ season.open({
 ```
 
 ### Customize Options
+- bgColor > main background color ('red' | '#ffffff')
 - mainBox > element where was created the subscribe form. for default add this after body tag
 - width > width to the form ('300px' or '90%')
 - height > height to the form ('300px')
 - header > use or not header ('block' | 'none')
+- headerBgcolor > bg color
+- headerColor > text color
 - headerText > header text
 - buttonText > submit button text
 - buttonLink > href of submit button (link)
@@ -43,6 +46,7 @@ season.open({
 - buttonBorderRadius
 - buttonBgcolorHover
 - buttonColor
+- buttonFontSize (10px | 2rem)
 - buttonColorHover
 - buttonBorderColorHover
 - buttonBorderRadiusHover
