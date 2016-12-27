@@ -56,10 +56,13 @@
 				break;
 			default:
 				// def config
+				this.options.bgColor = (this.options.bgColor) ? this.options.bgColor : '#92e1ee';
 				this.options.width = (this.options.width) ? this.options.width : '200px';
 				this.options.height = (this.options.height) ? this.options.height : '190px';
 				this.options.mainBox = (this.options.mainBox) ? this.options.mainBox : 'body';
 				this.options.header = (this.options.header) ? this.options.header : 'block';
+				this.options.headerBgcolor = (this.options.headerBgcolor) ? this.options.headerBgcolor : 'black';
+				this.options.headerColor = (this.options.headerColor) ? this.options.headerColor : 'white';
 				this.options.headerHeight = (this.options.headerHeight) ? this.options.headerHeight : '30px';
 				this.options.inputBorderRadius = (this.options.inputBorderRadius) ? this.options.inputBorderRadius : '10px';
 				this.options.inputBorderColor = (this.options.inputBorderColor) ? this.options.inputBorderColor : 'black';
@@ -79,10 +82,11 @@
 				this.options.buttonColorHover = (this.options.buttonColorHover) ? this.options.buttonColorHover : 'white';
 				this.options.buttonBorderColorHover = (this.options.buttonBorderColorHover) ? this.options.buttonBorderColorHover : 'blue';
 				this.options.buttonBorderRadiusHover = (this.options.buttonBorderRadiusHover) ? this.options.buttonBorderRadiusHover : '10px';
+				this.options.buttonFontSize = (this.options.buttonFontSize) ? this.options.buttonFontSize : '15px';
 				// end def config
 				theme = `<style>
 									.seasonform{
-										background: #92e1ee;
+										background: `+this.options.bgColor+`;
 										width: `+this.options.width+`;
 										height: `+this.options.height+`;
 										display: block;
@@ -91,14 +95,13 @@
 									.seasonform .header{
 								    width: 100%;
 								    height: `+this.options.headerHeight+`;
-								    background: black;
-								    color: white;
+								    background: `+this.options.headerBgcolor+`;
 								    margin-bottom: 1em;
 								    display: `+this.options.header+`;
 								    box-sizing: border-box;
 									}
 									.seasonform .header p{
-										color:white;
+										color:`+this.options.headerColor+`;;
 										line-height: 1.7;
     								text-align: center;
 									}
@@ -148,6 +151,7 @@
 								    margin: 1em auto;
 								    border: 1px solid `+this.options.buttonBorderColor+`;
 								    border-radius: `+this.options.buttonBorderRadius+`;
+								    font-size: `+this.options.buttonFontSize+`;
 									}
 									.seasonform .mainbox .btn:hover{
 										background: `+this.options.buttonBgcolorHover+`;
